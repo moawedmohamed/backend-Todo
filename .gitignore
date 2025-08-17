@@ -1,0 +1,28 @@
+# تجاهل مجلدات التثبيت
+node_modules/
+
+# تجاهل ملفات البيئة (حساسة)
+.env
+
+# تجاهل ملفات اللوج
+*.log
+logs/
+*.log.*
+
+# تجاهل ملفات البناء
+dist/
+build/
+
+# تجاهل ملفات نظام التشغيل
+.DS_Store
+Thumbs.db
+
+# تجاهل ملفات محرر الأكواد
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# تجاهل ملفات temporary
+*.tmp
+*.swp
