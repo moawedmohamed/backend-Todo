@@ -14,7 +14,7 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
             [username, email, hashPassword]
         );
         const user = resultQuery.rows[0];
-        const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "7d" });
         res.json({ user, token });
     } catch (err: any) {
         console.log(err);
@@ -43,7 +43,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
             res.status(400).json({ message: "email or password is not correct" });
             return;
         }
-        const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "7d" });
         res.json({ user, token });
     } catch (err) {
         console.log(err);
